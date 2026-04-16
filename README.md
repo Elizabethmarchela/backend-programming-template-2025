@@ -19,10 +19,10 @@
 
 ## Penjelasan EndPoint
 
-1. Play Gacha (POST /play): Digunakan untuk bermain gacha. Memerlukan input JSON body berupa userId. Sistem akan memberikan respons berupa hasil gacha dan secara otomatis membatasi setiap user maksimal 5 kali percobaan per hari.
+1. Play Gacha (POST /play): Digunakan untuk bermain gacha. Perlu input JSON body berupa userId. Respons sistem akan berupa hasil gacha dan secara otomatis membatasi setiap user maksimal 5 kali percobaan per hari.
 
 2. List Rewards (GET /rewards): Menampilkan daftar seluruh hadiah yang ada beserta sisa kuota untuk masing-masing hadiah. Data ini akan berkurang secara otomatis setiap kali ada user yang menang.
 
 3. Winners List (GET /winners): Menampilkan daftar user yang telah memenangkan hadiah. Nama pemenang akan disamarkan secara acak (contoh: J*\*\* *oe) untuk melindungi privasi user.
 
-4. User Gacha History (GET /history/:id): Menampilkan seluruh riwayat aktivitas gacha milik user tertentu. Masukkan ID User pada parameter URL (path parameter) untuk melihat daftar kemenangan maupun kekalahan user tersebut.
+4. User Gacha History (GET /history/:id): Menampilkan seluruh riwayat aktivitas gacha setiap user yang main. Masukkan ID User pada parameter URL (path parameter) untuk melihat daftar menang maupun kalah user tersebut.
